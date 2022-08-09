@@ -11,9 +11,9 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       - uses: actions/checkout@v3
-        name: run bash command 
-      env:
-      MY_SECRET: ${{secret.MY_SECRET}}
-      -run: echo$MY_SECRET
+      - name: run bash command 
+        env:
+        MY_SECRET: ${{secret.MY_SECRET}}
+      run: echo $MY_SECRET
       
         
