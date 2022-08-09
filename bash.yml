@@ -7,10 +7,13 @@ on:
 
 
 jobs:
-    bash:
+  bash:
       runs-on: ubuntu-latest
       steps:
       - uses: actions/checkout@v3
         name: run bash command 
-      - run: npm install 
+      env:
+      MY_SECRET: ${{secret.MY_SECRET}}
+      -run: echo$MY_SECRET
+      
         
